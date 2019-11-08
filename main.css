@@ -1,0 +1,52 @@
+body {
+ background-image: url("img/alex.gif");
+ background-color: #cccccc;
+}
+
+.text-center {
+	text-align: center;
+}
+
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+ height: 23em;
+width: 22em;
+
+}
+
+.center2 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.whitebg {
+	background-color: rgba(255,255,255,0.8);
+}
+
+#footer {
+ font-family: sans-serif;
+}
+
+.font {
+ font-family: sans-serif;
+}
+
+#heart {
+	color: red;
+}
+
+.under-construction {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 100px;
+  width: 100px;
+}
+
