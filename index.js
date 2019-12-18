@@ -18,9 +18,8 @@ for(let i = 0; i < (window.innerWidth / 70 + 1); ++i) {
                 document.getElementById("counter").textContent = Number(document.getElementById("counter").textContent.trim()) + 1;
                 
                 setTimeout( (element) => {
-                    console.dir(element)
                     element.style.display = "none";
-                }, 3000, event.target)
+                }, 1000, event.target)
             }
         })
         document.body.appendChild(cloneImg);
