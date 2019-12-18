@@ -1,52 +1,72 @@
 body {
- background-image: url("img/alex.gif");
- background-color: #cccccc;
-}
-
-.text-center {
-	text-align: center;
-}
-
+  background-color: #cccccc;
+ }
+ 
+ .text-center {
+   text-align: center;
+ }
+ 
+ .kills {
+   font-size: 25px;
+   font-weight: bold;
+   position: fixed;
+   bottom: 20px;
+   left: 20px;
+ }
+ 
+ * {
+   z-index: 1;
+ }
+ 
+ .rifle {
+   cursor: url('img/rifle.png'), auto;
+   z-index: 0;
+ }
+ 
  .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
- height: 23em;
-width: 22em;
-
-}
-
-.center2 {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-}
-
-.whitebg {
-	background-color: rgba(255,255,255,0.8);
-}
-
-#footer {
- font-family: sans-serif;
-}
-
-.font {
- font-family: sans-serif;
-}
-
-#heart {
-	color: red;
-}
-
-.under-construction {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 100px;
-  width: 100px;
-}
-
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   height: 23em;
+   width: 22em;
+ 
+ }
+ 
+ .catalart {
+   width: 300px;
+   height: 300px;
+ }
+ 
+ .center2 {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   text-align: center;
+ }
+ 
+ .whitebg {
+   background-color: rgba(255,255,255,0.8);
+ }
+ 
+ #footer {
+  font-family: sans-serif;
+ }
+ 
+ .font {
+  font-family: sans-serif;
+ }
+ 
+ #heart {
+   color: red;
+ }
+ 
+ .under-construction {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+   height: 100px;
+   width: 100px;
+ }
