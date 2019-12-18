@@ -45,6 +45,11 @@ body {
   z-index: 0;
 }
 
+.hammer {
+  cursor: url("img/hammer.png"), auto;
+  z-index: 0;
+}
+
 .center {
   display: block;
   margin-left: auto;

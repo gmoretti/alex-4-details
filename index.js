@@ -10,23 +10,57 @@ document.addEventListener("mousemove", event => {
   mouseX = event.clientX;
   mouseY = event.clientY;
 });
-function startCatamole() {
-  alert("Not yet");
-}
 
-function startFollowLidl() {
-  startDrawKill(true);
-}
-function startDrawKill(lidl = false) {
-  if (!lidl) {
-    document.getElementById("kill-board").style.display = "initial";
-  }
+function createAlex() {
   const img = document.createElement("img");
 
   img.src = "img/alex.gif";
   img.style.height = "70px";
   img.style.width = "70px";
   img.style.position = "absolute";
+  return img;
+}
+function startCatamole() {
+  document.getElementById("kill-board").style.display = "initial";
+
+  const alex = createAlex();
+  alex.style.height = "0";
+  alex.style.width = "0";
+  alex.style.left = Math.random() * window.innerWidth - 100 + "px";
+  alex.style.top = Math.random() * window.innerHeight - 100 + "px";
+  alex.style.transition = "height 20s, width 20s";
+  alex.className += " hammer";
+
+  alex.addEventListener("click", event => {
+    event.target.src = "img/explode.gif";
+    document.getElementById("counter").textContent =
+      Number(document.getElementById("counter").textContent.trim()) + 1;
+
+    setTimeout(
+      element => {
+        element.style.display = "none";
+      },
+      1000,
+      event.target
+    );
+    startCatamole();
+  });
+  document.body.appendChild(alex);
+  setTimeout(() => {
+    alex.style.width = "2000px";
+    alex.style.height = "2000px";
+  }, 100);
+}
+
+function startFollowLidl() {
+  document.body.className += " lidl";
+  startDrawKill(true);
+}
+function startDrawKill(lidl = false) {
+  if (!lidl) {
+    document.getElementById("kill-board").style.display = "initial";
+  }
+  const img = createAlex();
   img.className = lidl ? img.className + " lidl" : img.className + " rifle";
 
   const maxI = lidl ? 60 : window.innerWidth / 70 + 1;
